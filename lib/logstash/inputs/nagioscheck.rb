@@ -33,8 +33,8 @@ class LogStash::Inputs::Nagioscheck < LogStash::Inputs::Exec
         :command => @command, :e => e, :backtrace => e.backtrace)
     end
     duration = Time.now - start
-    @logger.debug? && @logger.debug("Command completed", :command => @command, :duration => duration)
-    if output
+    unless exit_status.nil? #exit status will be nil if the command never completed running
+      @logger.debug? && @logger.debug("Command completed", :command => @command, :duration => duration)
       @codec.decode(output) do |event|
         decorate(event)
 
@@ -43,7 +43,7 @@ class LogStash::Inputs::Nagioscheck < LogStash::Inputs::Exec
         event.set("check_uuid", SecureRandom.uuid)
 
         unless cmd_perf.nil?
-          cmd_perf.strip.split_by_spaces_except_quoted.each { |metric| 
+          cmd_perf.strip.split_by_spaces_except_single_quoted.each { |metric| 
     
               results = parse_performance(metric)
     
@@ -51,7 +51,6 @@ class LogStash::Inputs::Nagioscheck < LogStash::Inputs::Exec
                 
                 @logger.warn("Error parsing nagios performance data (malformed)", :raw => event.get("message"))
                 event.tag(@failure_tag)
-                break
     
               else 
     
@@ -94,8 +93,8 @@ class LogStash::Inputs::Nagioscheck < LogStash::Inputs::Exec
 end # class LogStash::Inputs::Nagioscheck
 
 class String
-  def split_by_spaces_except_quoted
-   self.split(/\s(?=(?:[^"]|"[^"]*")*$)/)
+  def split_by_spaces_except_single_quoted
+  self.split(/\s(?=(?:[^']|'[^']*')*$)/)
   end
 end
 

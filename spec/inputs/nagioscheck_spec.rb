@@ -72,8 +72,10 @@ describe LogStash::Inputs::Nagioscheck do
   end
 
 
-  context "when we simulate certain output 3" do
-    let(:input) { LogStash::Plugin.lookup("input", "nagioscheck").new("name" => "my_check", "command" => "echo 'Some Disk Data | /home/a-m=0;0;0 shared-folder:big=20 12345678901234567890=20'", "interval" => 0) }
+
+
+  context "when we simulate certain output 3 - quoted strings" do
+    let(:input) { LogStash::Plugin.lookup("input", "nagioscheck").new("name" => "my_check", "command" => "echo 'Some Disk Data | /home/a-m=0;0;0 '\"'\"'i have spaces'\"'\"'=20 '\"'\"'12345678901234567890'\"'\"'=20'", "interval" => 0) }
     let(:queue) { [] }
 
     before do
@@ -93,7 +95,7 @@ describe LogStash::Inputs::Nagioscheck do
       expect(queue[0].get("value")).to eq  0
       expect(queue[0].get("warning")).to eq  0 
       expect(queue[0].get("critical")).to eq  0
-      expect(queue[1].get("label")).to eq  "shared-folder:big"     
+      expect(queue[1].get("label")).to eq  "i have spaces"     
       expect(queue[1].get("value")).to eq  20
       expect(queue[2].get("label")).to eq  "12345678901234567890"     
       expect(queue[2].get("value")).to eq  20
@@ -129,6 +131,7 @@ describe LogStash::Inputs::Nagioscheck do
     end
 
   end
+
 
   context "when we simulate malformed output" do
     let(:input) { LogStash::Plugin.lookup("input", "nagioscheck").new("name" => "my_broken_plugin", "failure_tag" => "i_must_appear", "command" => "echo 'Some Status | invalid;perf data'", "interval" => 0) }
