@@ -1,0 +1,99 @@
+{
+  "mappings": {
+    "doc": {
+      "_meta": {
+        "version": "6.2.0"
+      },
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        },
+        "@version": {
+          "type": "keyword",
+          "ignore_above": 256
+        },
+        "check_uuid": {
+          "type": "keyword",
+          "ignore_above": 256
+        },
+        "command": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "critical": {
+          "type": "float"
+        },
+        "host": {
+          "type": "keyword",
+          "ignore_above": 256
+        },
+        "label": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "max": {
+          "type": "float"
+        },
+        "message": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "min": {
+          "type": "float"
+        },
+        "name": {
+          "type": "keyword",
+          "ignore_above": 256
+        },
+        "status": {
+          "type": "keyword",
+          "ignore_above": 256
+        },
+        "status_code": {
+          "type": "long"
+        },
+        "tags": {
+          "type": "keyword",
+          "ignore_above": 256
+        },
+        "took_ms": {
+          "type": "float"
+        },
+        "type": {
+          "type": "keyword",
+          "ignore_above": 256
+        },
+        "uom": {
+          "type": "keyword",
+          "ignore_above": 256
+        },
+        "value": {
+          "type": "float"
+        },
+        "warning": {
+          "type": "float"
+        }
+      }
+    }
+  },
+  "order": 0,
+  "settings": {
+    "index.refresh_interval": "5s"
+  },
+  "template": "nagios-*"
+}

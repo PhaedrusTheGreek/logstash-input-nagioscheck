@@ -1,0 +1,13 @@
+{
+  "title": "Nagios Overview",
+  "hits": 0,
+  "description": "",
+  "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":3,\"y\":0,\"w\":9,\"h\":3,\"i\":\"1\"},\"id\":\"d602cb70-52d1-11e8-8d6e-5ded8718dfbd\",\"type\":\"visualization\",\"version\":\"6.2.3\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":6,\"y\":3,\"w\":6,\"h\":3,\"i\":\"3\"},\"embeddableConfig\":{\"table\":{\"sort\":{\"column\":\"7fa9c650-52d3-11e8-a1cd-61c073d732d5\",\"order\":\"desc\"}}},\"id\":\"e1b3e380-52d3-11e8-8d6e-5ded8718dfbd\",\"type\":\"visualization\",\"version\":\"6.2.3\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":0,\"y\":0,\"w\":3,\"h\":3,\"i\":\"5\"},\"embeddableConfig\":{\"vis\":{\"colors\":{\"Critical\":\"#F29191\",\"OK\":\"#B7DBAB\",\"Warning\":\"#F4D598\"},\"legendOpen\":false}},\"id\":\"e6d01410-52d8-11e8-8d6e-5ded8718dfbd\",\"type\":\"visualization\",\"version\":\"6.2.3\"},{\"panelIndex\":\"6\",\"gridData\":{\"x\":0,\"y\":3,\"w\":6,\"h\":3,\"i\":\"6\"},\"id\":\"7b67a110-52d9-11e8-8d6e-5ded8718dfbd\",\"type\":\"visualization\",\"version\":\"6.2.3\"}]",
+  "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+  "version": 1,
+  "timeRestore": false,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+ }
+}
+   

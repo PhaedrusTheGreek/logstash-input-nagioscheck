@@ -1,0 +1,10 @@
+{
+  "title": "Status of All Hosts",
+  "visState": "{\"title\":\"Status of All Hosts\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"host\",\"customLabel\":\"Hosts\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"filters\",\"schema\":\"segment\",\"params\":{\"filters\":[{\"input\":{\"query\":\"status:OK\"},\"label\":\"OK\"},{\"input\":{\"query\":\"status:CRITICAL\"},\"label\":\"Critical\"},{\"input\":{\"query\":\"status:WARNING\"},\"label\":\"Warning\"}]}}]}",
+  "uiStateJSON": "{\"vis\":{\"colors\":{\"Critical\":\"#F29191\",\"OK\":\"#B7DBAB\",\"Warning\":\"#F4D598\"}}}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"nagios-*\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+  }
+}

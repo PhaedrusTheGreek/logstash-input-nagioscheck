@@ -1,0 +1,10 @@
+{
+    "title": "Status Overview",
+    "visState": "{\"title\":\"Status Overview\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"filters\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"cardinality\",\"field\":\"name\"},{\"id\":\"ee99b260-52d2-11e8-a1cd-61c073d732d5\",\"type\":\"count\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":\"0\",\"point_size\":1,\"fill\":\"0.5\",\"stacked\":\"stacked\",\"terms_field\":\"label.keyword\",\"label\":\"OK\",\"filter\":\"\",\"split_filters\":[{\"filter\":\"status: OK\",\"label\":\"OK\",\"color\":\"#68BC00\",\"id\":\"b6262af0-52d0-11e8-a1cd-61c073d732d5\"},{\"filter\":\"status: WARNING\",\"label\":\"WARNING\",\"color\":\"rgba(252,220,0,1)\",\"id\":\"b9c91b40-52d0-11e8-a1cd-61c073d732d5\"},{\"filter\":\"status: CRITICAL\",\"label\":\"CRITICAL\",\"color\":\"rgba(244,78,59,1)\",\"id\":\"c95387d0-52d0-11e8-a1cd-61c073d732d5\"}],\"split_color_mode\":\"gradient\",\"hide_in_legend\":0,\"color_rules\":[{\"id\":\"7eae92e0-52d2-11e8-a1cd-61c073d732d5\"}]}],\"time_field\":\"@timestamp\",\"index_pattern\":\"nagios*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"show_grid\":0,\"gauge_color_rules\":[{\"id\":\"6bbfd790-52d0-11e8-a1cd-61c073d732d5\"}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"bar_color_rules\":[{\"id\":\"42bc8120-52d2-11e8-a1cd-61c073d732d5\"}],\"background_color_rules\":[{\"id\":\"4d7a4a70-52d2-11e8-a1cd-61c073d732d5\"}],\"pivot_id\":\"name\",\"pivot_label\":\"Name\",\"markdown\":\"{{warning.last.raw}}\"},\"aggs\":[]}",
+    "uiStateJSON": "{}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{}"
+    }
+  }

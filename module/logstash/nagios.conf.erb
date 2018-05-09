@@ -1,0 +1,10 @@
+input {
+  nagioscheck {
+    name => "my_dummy_check"
+    command => "/usr/local/sbin/check_dummy 0 Hello"
+    interval => "10"
+  }
+}
+output {
+ <%= elasticsearch_output_config() %>
+}
