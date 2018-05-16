@@ -1,7 +1,7 @@
 # encoding: utf-8
 require "logstash/devutils/rspec/spec_helper"
 require "logstash/inputs/nagioscheck"
-
+require 'pp'
 
 describe LogStash::Inputs::Nagioscheck do
 
@@ -206,6 +206,7 @@ describe LogStash::Inputs::Nagioscheck do
 
     it "it parses out properly" do
 
+      pp(queue[0].to_hash)
       expect(queue[0].get('type')).to eq "nagiosmetric"
       expect(queue[0].get('name')).to eq "my_load_check"
       expect(queue[0].get('label')).to eq "load1"
