@@ -192,7 +192,7 @@ describe LogStash::Inputs::Nagioscheck do
   end
 
   context "when a real check runs" do
-    let(:input) { LogStash::Plugin.lookup("input", "nagioscheck").new("name" => "my_load_check", "command" => "/usr/local/sbin/check_load -w 0,2,3 -c 0,5,6", "interval" => 0) }
+    let(:input) { LogStash::Plugin.lookup("input", "nagioscheck").new("name" => "my_load_check", "command" => File.join(File.dirname(__FILE__), "check_test.sh"), "interval" => 0) }
     let(:queue) { [] }
 
     before do
